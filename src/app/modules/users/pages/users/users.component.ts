@@ -8,13 +8,16 @@ import { UsersService } from '../../services/users.service';
 })
 export class UsersComponent implements OnInit {
 
-  users: {}[] = [];
+  users: {}[];
 
   constructor(private service: UsersService) {  }
 
   ngOnInit(): void {
     this.service.getUsers().subscribe((data: {}[]) => {
-      this.users = data;
+      const sortedUsers = data.sort((a: any, b: any) =>
+      a.username.localeCompare(b.username));
+
+      this.users = sortedUsers;
     });
   }
 }
