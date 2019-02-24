@@ -2,8 +2,14 @@
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
+
+  &__list {
+    list-style-type: none;
+    
+    post {
+      margin: 1em;
+    }
+  }
+  
 }
 
-post {
-  margin: 1em;
-}
