@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './modules/main/pages/main.component';
 import { PostComponent } from './modules/posts/components/post/post.component';
 import { PostsComponent } from './modules/posts/pages/posts/posts.component';
+import { UserComponent } from './modules/users/components/user/user.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
     MainComponent,
     PostsComponent,
     PostComponent,
-    UsersComponent
+    UsersComponent,
+    UserComponent
   ],
   imports: [BrowserModule,
     BrowserAnimationsModule,
