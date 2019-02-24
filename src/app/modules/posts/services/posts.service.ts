@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
-interface Post {
+interface Ipost {
   userId: Number;
   id: Number;
   title: string;
@@ -19,6 +19,6 @@ export class PostsService {
   constructor(private http: HttpClient) { }
 
   getPosts(): any {
-    return this.http.get<Post>(this.apiURL);
+    return this.http.get<Ipost>(this.apiURL);
   }
 }
