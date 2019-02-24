@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { UserComponent } from './components/user/user.component';
 import { NewUserComponent } from './pages/new-user/new-user.component';
 import { UsersComponent } from './pages/users/users.component';
+import { UsersService } from './services/users.service';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,6 @@ import { UsersComponent } from './pages/users/users.component';
     NewUserComponent
   ],
   imports: [],
-  providers: []
+  providers: [UsersService]
 })
 export class UsersModule {}
