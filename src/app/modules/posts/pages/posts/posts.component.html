@@ -2,7 +2,13 @@
 
 <div class="posts">
   <h2>Posts</h2>
-  <!-- show posts -->
+  
+  <ul *ngFor="let post of posts">
+    <li>
+      <post [post]='post'></post>
+    </li>
+  </ul>
+
 </div>
 
 <footer></footer>

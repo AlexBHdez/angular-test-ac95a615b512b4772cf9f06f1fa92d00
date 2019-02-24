@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './modules/main/pages/main.component';
+import { PostComponent } from './modules/posts/components/post/post.component';
 import { PostsComponent } from './modules/posts/pages/posts/posts.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
 
@@ -29,6 +30,7 @@ const routes: Routes = [
     HeaderComponent,
     MainComponent,
     PostsComponent,
+    PostComponent,
     UsersComponent
   ],
   imports: [BrowserModule,
