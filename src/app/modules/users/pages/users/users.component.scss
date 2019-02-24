@@ -2,8 +2,13 @@
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
+
+  &__list {
+    list-style-type: none;
+    
+    user {
+      margin: 1em;
+    }
+  }
 }
 
-user {
-  margin: 1em;
-}
