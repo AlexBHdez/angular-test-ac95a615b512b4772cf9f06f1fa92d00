@@ -15,12 +15,14 @@ import { MainComponent } from './modules/main/pages/main.component';
 import { PostComponent } from './modules/posts/components/post/post.component';
 import { PostsComponent } from './modules/posts/pages/posts/posts.component';
 import { UserComponent } from './modules/users/components/user/user.component';
+import { NewUserComponent } from './modules/users/pages/new-user/new-user.component';
 import { UsersComponent } from './modules/users/pages/users/users.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: MainComponent },
   { path: 'users', component: UsersComponent },
+  { path: 'users/new', component: NewUserComponent },
   { path: 'posts', component: PostsComponent }
 ];
 
@@ -33,7 +35,8 @@ const routes: Routes = [
     PostsComponent,
     PostComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    NewUserComponent
   ],
   imports: [BrowserModule,
     BrowserAnimationsModule,
