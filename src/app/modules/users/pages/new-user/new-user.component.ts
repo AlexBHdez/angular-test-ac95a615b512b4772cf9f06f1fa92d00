@@ -7,8 +7,22 @@ import { Component } from '@angular/core';
 })
 export class NewUserComponent {
 
+  newUser: {} = {
+    name: '',
+    username: '',
+    email: '',
+    adress: {
+      street: '',
+      city: ''
+    },
+    zipCode: Number,
+    phone: Number,
+    website: ''
+  };
+
   submitForm(user: {}): void {
     console.log(user);
+    console.log(this.newUser);
   }
 
 }
