@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
-
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Components
+import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './modules/main/pages/main.component';
@@ -38,10 +38,13 @@ const routes: Routes = [
     UserComponent,
     NewUserComponent
   ],
-  imports: [BrowserModule,
+  imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule],
+    HttpClientModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

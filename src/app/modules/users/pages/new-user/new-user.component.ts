@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './new-user.component.html',
   styleUrls: ['./new-user.component.scss']
 })
-export class NewUserComponent {}
+export class NewUserComponent {
+
+  submitForm(user: {}): void {
+    console.log(user);
+  }
+
+}
