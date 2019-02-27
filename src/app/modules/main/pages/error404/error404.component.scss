@@ -1,0 +1,11 @@
+.error {
+  text-align: center;
+
+  &__actions {
+    padding-top: 2em;
+
+    &_text {
+      padding: 0 5em;
+    }
+  }
+}
