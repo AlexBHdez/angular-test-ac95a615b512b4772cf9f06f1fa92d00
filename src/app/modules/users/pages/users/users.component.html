@@ -4,5 +4,9 @@
     Add new User
   </button>
 
-  <!-- show users -->
+  <ul *ngFor="let user of users" class="users__list">
+    <li>
+      <user [user]='user'></user>
+    </li>
+  </ul>  
 </div>

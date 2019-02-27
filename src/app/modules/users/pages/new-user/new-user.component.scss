@@ -10,5 +10,17 @@
     label, input{
       display: block;
     }
+
+    .ng-touched {
+      border-color: blue;
+
+      &.ng-invalid {
+        border-color: red;
+      }
+
+      &.ng-valid {
+        border-color: green;
+      }
+    }
   }
 }
