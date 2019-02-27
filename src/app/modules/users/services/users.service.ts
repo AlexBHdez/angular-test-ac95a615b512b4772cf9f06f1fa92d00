@@ -21,4 +21,11 @@ export class UsersService {
 
     return this.users;
   }
+
+  newUser(user: {}): void {
+    this.http.post(this.apiURL, user)
+    .subscribe((response: {}) => {
+      console.log(response);
+    });
+  }
 }
