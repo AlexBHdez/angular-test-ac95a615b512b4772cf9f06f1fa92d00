@@ -3,12 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface Ipost {
-  userId: Number;
-  id: Number;
-  title: string;
-  body: string;
-}
+import { Ipost } from '../../../interfaces';
 
 @Injectable({
   providedIn: 'root'

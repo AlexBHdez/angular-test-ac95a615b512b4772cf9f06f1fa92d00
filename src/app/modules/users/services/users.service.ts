@@ -3,29 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-interface Iuser {
-  id: Number;
-  name: string;
-  username: string;
-  email: string;
-  adress: {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: Number;
-    geo: {
-      lat: Number;
-      lng: Number;
-    };
-  };
-  phone: Number;
-  website: string;
-  company: {
-    name: string;
-    catchPhrase: string;
-    bs: string;
-  };
-}
+import { Iuser } from '../../../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -34,9 +12,13 @@ export class UsersService {
 
   apiURL: string = 'https://jsonplaceholder.typicode.com/users';
 
+  users: Observable<{}[]>;
+
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<{}[]> {
-    return this.http.get<Iuser[]>(this.apiURL);
+    this.users = this.http.get<Iuser[]>(this.apiURL);
+
+    return this.users;
   }
 }
